@@ -232,7 +232,7 @@ header {
 @media (max-width: 768px) {
   header {
     background-position: left;
-    background-size: 138%;
+    background-size: 108vh;
   }
 }
 .hero {
@@ -270,9 +270,6 @@ header {
 i {
   color: var(--secondary);
 }
-@media (max-width: 576px) {
-  background-size: 110%;
-} 
 /* Store */
 section {
   padding: 0 1rem;
