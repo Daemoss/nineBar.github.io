@@ -247,6 +247,7 @@ header {
 .hero-cta {
   width: 100%;
   max-height: 1px;
+  margin: 0 0 300px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,6 +256,10 @@ header {
 .cta-container {
   position: relative;
   top: -450px;
+}
+.cta-container a {
+  position: relative;
+  top: 180px;
 }
 @keyframes fadeIn {
   to {
@@ -429,7 +434,7 @@ i a {
   position: relative;
   top: 290px;
   width: calc(var(--radius) * 2 + 0); /* extra padding so letters don't clip */
-  height: calc(var(--radius) * 2 + 80px);
+  height: calc(var(--radius) * 2 + 0);
   animation: spin var(--speed) linear infinite;
   z-index: 1;
 }
@@ -441,6 +446,7 @@ i a {
 }
 
 .char {
+  color: var(--secondary);
   position: absolute;
   top: 50%;
   left: 50%;
