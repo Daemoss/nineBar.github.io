@@ -270,6 +270,9 @@ header {
 i {
   color: var(--secondary);
 }
+@media (max-width: 576px) {
+  background-size: 110%;
+} 
 /* Store */
 section {
   padding: 0 1rem;
