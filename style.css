@@ -27,7 +27,7 @@ body {
   background-color: var(--white);
   color: var(--dark);
   font-family: sans-serif;
-  overflow-x: hidden;
+  width: 100vw;
 }
 main {
   width: 100%;
@@ -179,11 +179,10 @@ strong {
   color: var(--secondary);
   font-weight: 700;
 }
-
 .ring {
   position: relative;
-  width: 320px; /* 2 * (RADIUS + font size-ish for padding) */
-  height: 320px;
+  width: 100px; /* 2 * (RADIUS + font size-ish for padding) */
+  height: 100px;
 }
 .char {
   position: absolute;
@@ -247,13 +246,15 @@ header {
 }
 .hero-cta {
   width: 100%;
-  height: 5vh;
+  max-height: 1px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 870px;
+  align-items: center;
+  z-index: 999;
+}
+.cta-container {
+  position: relative;
+  top: -450px;
 }
 @keyframes fadeIn {
   to {
@@ -426,10 +427,8 @@ i a {
 /* The ring itself rotates */
 .ring {
   position: relative;
-  top: 110px;
-  width: calc(
-    var(--radius) * 2 + 80px
-  ); /* extra padding so letters don't clip */
+  top: 290px;
+  width: calc(var(--radius) * 2 + 0); /* extra padding so letters don't clip */
   height: calc(var(--radius) * 2 + 80px);
   animation: spin var(--speed) linear infinite;
   z-index: 1;
