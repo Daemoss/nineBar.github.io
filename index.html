@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Nine Bar - Bruze, Booze & Bites</title>
+  </head>
+  <body>
+    <nav>
+      <button></button>
+      <img class="logoImg" src="./assets/NineBarLogo.png" alt="Logo" />
+      <button id="toggleMenu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          role="img"
+          aria-labelledby="title"
+        >
+          <title id="title">Three-line menu button</title>
+          <g
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            fill="none"
+          >
+            <line x1="2" y1="6" x2="22" y2="6" />
+            <line x1="10" y1="12" x2="22" y2="12" />
+            <line x1="2" y1="18" x2="22" y2="18" />
+          </g>
+        </svg>
+      </button>
+      <div id="nav-drawer" class="nav-drawer" hidden>
+        <button id="closeMenu">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <ul>
+          <li><img src="./assets/bean.png" alt="" /><a href="">Αρχική</a></li>
+          <li><img src="./assets/bean.png" alt="" /><a href="">Μενού</a></li>
+          <li><img src="./assets/bean.png" alt="" /><a href="">Ο Καφές</a></li>
+          <li><img src="./assets/bean.png" alt="" /><a href="">Χώρος</a></li>
+          <li><img src="./assets/bean.png" alt="" /><a href="">Εμείς</a></li>
+          <li>
+            <img src="./assets/bean.png" alt="" /><a href="">Επικοινωνία</a>
+          </li>
+        </ul>
+        <img src="./assets/NineBarLogo.png" alt="" class="menuStyleImg" />
+        <img src="./assets/coffeecup.png" alt="" class="menuStyleCoffee" />
+      </div>
+    </nav>
+
+    <main>
+      <header>
+        <div class="overlay"></div>
+        <div class="hero">
+          <h1 class="hero-display">
+            Representing precision, expertise & the pursuit of
+            <strong>coffee perfection</strong>
+          </h1>
+        </div>
+      </header>
+      <div class="hero-cta">
+        <div class="ring" id="ring"></div>
+        <a href=""
+          ><img
+            class="nineBar-menu"
+            src="./assets/nineBarMenu-removebg-preview.png"
+            alt="Nine bar menu"
+        /></a>
+      </div>
+      <div class="ring" id="ring"></div>
+      <section class="nineBar" id="first-section">
+        <div class="section-content">
+          <div class="image-container">
+            <img
+              class="section-img"
+              src="./assets/CoffeeMakingExp.jpg"
+              alt="barista making coffee"
+            />
+          </div>
+          <div class="text-container">
+            <p class="small-txt">years of experience and expertise</p>
+            <h3>Εμπειρία. Ακρίβεια. Ευχαρίστηση.</h3>
+            <p>
+              Στον χώρο μας ο καφές δεν είναι απλώς ρόφημα, είναι εμπειρία.
+              Μεράκι, σύγχρονες τεχνικές και προσοχή στη λεπτομέρεια
+              συνδυάζονται για να απολαύσεις κάθε γουλιά. Ένας φιλικός
+              προορισμός όπου η ακρίβεια συναντά τη ζεστασιά και το πάθος για
+              την τελειότητα στον καφέ.
+            </p>
+            <a class="link-btn" href="">Μαθε για τον καφέ μας</a>
+          </div>
+        </div>
+      </section>
+      <section class="nineBar" id="second-section">
+        <div class="section-content">
+          <div class="image-container">
+            <img
+              class="section-img"
+              src="./assets/OurPlace.jpg"
+              alt="barista making coffee"
+            />
+          </div>
+          <div class="text-container">
+            <p class="small-txt">NOT FOR SIMPLE TAKE-AWAYS</p>
+            <h3>Θα γίνουμε το στέκι σου.</h3>
+            <p>
+              Στο Nine Bar η εμπειρία δεν σταματά στον καφέ. Είναι ο χώρος που
+              φιλοξενεί βραδιές γεμάτες παιχνίδι και παρέα: από μπιλιάρδο και
+              darts μέχρι παρακολούθηση αγώνων, βραδινά ποτά και επιτραπέζια που
+              κρατούν τη διάθεση ψηλά.
+            </p>
+            <a class="link-btn" href="">Δες φωτογραφίες</a>
+          </div>
+        </div>
+      </section>
+      <section class="find-us">
+        <div class="text-container">
+          <h6>Βρείτε μας στον χάρτη</h6>
+          <p>
+            <a href=""
+              >Ανθοκήπων 1, Ευκαρπία 564 29 <br />
+              +30 2316010460</a
+            >
+          </p>
+          <h6>Ωράριο λειτουργίας</h6>
+          <p>
+            Δευτερα - Παρασκευή <br />
+            7:00 - 23:00
+          </p>
+          <p>
+            Σαββατοκύριακο <br />
+            8:00 - 00:00
+          </p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.673622802261!2d22.94726169999999!3d40.6811597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a837773c41c50b%3A0xf5293491b7274203!2sNine%20Bar!5e0!3m2!1sel!2sgr!4v1757456345312!5m2!1sel!2sgr"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <footer>
+        <ul>
+          <li><a href="">Αρχική</a></li>
+          <li><a href="">Μενού</a></li>
+          <li><a href="">Ο Καφές</a></li>
+          <li><a href="">Χώρος</a></li>
+          <li><a href="">Εμείς</a></li>
+          <li><a href="">Επικοινωνία</a></li>
+        </ul>
+        <ul class="inline">
+          <li>
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/nine.bar_skg/"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <p class="small-tag">
+          All rights reserved by <i>Nine Bar</i> • Designed & Developed by
+          <i><a href="https://oryzo.gr" target="_blank">Oryzo</a></i>
+        </p>
+      </footer>
+    </main>
+    <script>
+      const box = document.getElementById("toggleMenu");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 760) {
+          box.style.color = "#027582"; // New height after 50px scroll
+        } else {
+          box.style.color = "#f2f0ef"; // Original height
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+    <script src="menuTxtAnimation.js"></script>
+  </body>
+</html>
