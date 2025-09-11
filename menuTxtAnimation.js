@@ -1,5 +1,5 @@
 // Change the text here
-const TEXT = "ΤΣΕΚΑΡΕ ΤΟ ΜΕΝΟΥ ΜΑΣ • ΤΣΕΚΑΡΕ ΤΟ ΜΕΝΟΥ ΜΑΣ •";
+const TEXT = "ΤΣΕΚΑΡΕ ΤΟ ΜΕΝΟΥ ΜΑΣ •";
 const RADIUS = parseInt(
   getComputedStyle(document.documentElement).getPropertyValue("--radius")
 );
