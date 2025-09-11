@@ -181,8 +181,8 @@ strong {
 }
 .ring {
   position: relative;
-  width: 100px; /* 2 * (RADIUS + font size-ish for padding) */
-  height: 100px;
+  width: 1px; /* 2 * (RADIUS + font size-ish for padding) */
+  height: 1px;
 }
 .char {
   position: absolute;
@@ -424,7 +424,7 @@ i a {
   }
 }
 :root {
-  --radius: 140px; /* distance from center to baseline */
+  --radius: 100px; /* distance from center to baseline */
   --font-size: 20px;
   --speed: 12s; /* rotation duration */
 }
@@ -436,7 +436,7 @@ i a {
   width: calc(var(--radius) * 2 + 0); /* extra padding so letters don't clip */
   height: calc(var(--radius) * 2 + 0);
   animation: spin var(--speed) linear infinite;
-  z-index: 1;
+  z-index: 999;
 }
 
 @keyframes spin {
@@ -446,7 +446,7 @@ i a {
 }
 
 .char {
-  color: var(--secondary);
+  color: var(--white);
   position: absolute;
   top: 50%;
   left: 50%;
