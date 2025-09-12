@@ -329,7 +329,6 @@ section {
 }
 .text-container .small-txt {
   color: var(--primary);
-  text-transform: uppercase;
   margin: 0;
 }
 .link-btn {
