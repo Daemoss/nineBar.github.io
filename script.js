@@ -1,26 +1,54 @@
-// Change the text here
-const TEXT = "ΤΣΕΚΑΡΕ ΤΟ ΜΕΝΟΥ ΜΑΣ •";
-const RADIUS = parseInt(
-  getComputedStyle(document.documentElement).getPropertyValue("--radius")
-);
-const FONT_SIZE = parseInt(
-  getComputedStyle(document.documentElement).getPropertyValue("--font-size")
-);
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("toggleMenu");
+  const navDrawer = document.getElementById("nav-drawer");
+  const closeBtn = document.getElementById("closeMenu");
 
-const ring = document.getElementById("ring");
-function layout(text, radius, fontSize) {
-  ring.innerHTML = "";
-  const chars = [...text];
-  const step = 360 / chars.length; // degrees per character
-  chars.forEach((ch, i) => {
-    const span = document.createElement("span");
-    span.className = "char";
-    span.textContent = ch;
-    span.style.fontSize = fontSize + "px";
-    const angle = -90 + i * step; // start at top
-    span.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(90deg)`;
-    ring.appendChild(span);
+  // allow transitions by making it present in layout, but closed
+  if (navDrawer.hasAttribute("hidden")) {
+    navDrawer.removeAttribute("hidden");
+    navDrawer.classList.remove("is-open");
+    navDrawer.setAttribute("aria-hidden", "true");
+    navDrawer.setAttribute("inert", "");
+  }
+
+  const openDrawer = () => {
+    navDrawer.classList.add("is-open");
+    navDrawer.removeAttribute("inert");
+    navDrawer.setAttribute("aria-hidden", "false");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "true");
+  };
+
+  const closeDrawer = () => {
+    navDrawer.classList.remove("is-open");
+    navDrawer.setAttribute("inert", "");
+    navDrawer.setAttribute("aria-hidden", "true");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+  };
+
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      const expanded = navToggle.getAttribute("aria-expanded") === "true";
+      expanded ? closeDrawer() : openDrawer();
+    });
+  }
+
+  if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+
+  navDrawer.addEventListener("click", (e) => {
+    if (e.target.closest("a")) closeDrawer();
   });
-}
 
-layout(TEXT, RADIUS, FONT_SIZE);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDrawer();
+  });
+
+  document.addEventListener(
+    "click",
+    (e) => {
+      const inside =
+        e.target.closest("#nav-drawer") || e.target.closest("#toggleMenu");
+      if (!inside) closeDrawer();
+    },
+    true
+  );
+});
