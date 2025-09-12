@@ -213,7 +213,6 @@ strong {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 1px dashed rgba(255, 255, 255, 0.15);
 }
 
 /* header */
@@ -283,7 +282,6 @@ header {
   height: 220px;
   background-color: var(--secondary);
   border-radius: 50%;
-  z-index: 2;
 }
 i {
   color: var(--secondary);
@@ -450,7 +448,7 @@ i a {
   width: calc(var(--radius) * 2 + 0); /* extra padding so letters don't clip */
   height: calc(var(--radius) * 2 + 0);
   animation: spin var(--speed) linear infinite;
-  z-index: 999;
+  z-index: 1;
 }
 
 @keyframes spin {
@@ -461,6 +459,7 @@ i a {
 
 .char {
   color: var(--white);
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -468,4 +467,5 @@ i a {
   font-size: var(--font-size);
   white-space: pre;
   will-change: transform;
+  z-index: -1;
 }
