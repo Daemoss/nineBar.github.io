@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nine Bar - Menu</title>
+
+    <script src="elementAnimation.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <button></button>
+      <img class="logoImg" src="../assets/NineBarLogo.png" alt="Logo" />
+      <button id="toggleMenu" aria-controls="nav-drawer" aria-expanded="false">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          role="img"
+          aria-labelledby="title"
+        >
+          <title id="title">Three-line menu button</title>
+          <g
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            fill="none"
+          >
+            <line x1="2" y1="6" x2="22" y2="6" />
+            <line x1="10" y1="12" x2="22" y2="12" />
+            <line x1="2" y1="18" x2="22" y2="18" />
+          </g>
+        </svg>
+      </button>
+      <div id="nav-drawer" class="nav-drawer" hidden aria-hidden="true" inert>
+        <button id="closeMenu" aria-label="Κλείσιμο">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <ul>
+          <li>
+            <img src="../assets/bean.png" alt="" /><a href="../index.html"
+              >Αρχική</a
+            >
+          </li>
+          <li>
+            <img src="../assets/bean.png" alt="" /><a href="./menuPage.html"
+              >Μενού</a
+            >
+          </li>
+          <li><img src="../assets/bean.png" alt="" /><a href="">Ο Καφές</a></li>
+          <li><img src="../assets/bean.png" alt="" /><a href="">Χώρος</a></li>
+          <li><img src="../assets/bean.png" alt="" /><a href="">Εμείς</a></li>
+          <li>
+            <img src="../assets/bean.png" alt="" /><a href="">Επικοινωνία</a>
+          </li>
+        </ul>
+        <img src="../assets/NineBarLogo.png" alt="" class="menuStyleImg" />
+        <img src="../assets/coffeecup.png" alt="" class="menuStyleCoffee" />
+      </div>
+    </nav>
+
+    <main>
+      <header id="menuHeader">
+        <div class="overlay"></div>
+        <div class="hero">
+          <h1 class="hero-display">
+            Στο μενού θα βρείς <strong>τα πάντα όλα</strong>
+          </h1>
+        </div>
+        <div class="cta-container">
+          <p>σκρολαρε παρακατω ↓</p>
+        </div>
+      </header>
+
+      <section id="menuOptions">
+        <div class="drinks">
+          <img
+            class="menuSectionImage notVisible"
+            style="height: 200px"
+            src="../assets/coffee.png"
+            alt=""
+          />
+          <h5 class="sub-title">Καφέδες</h5>
+          <ul class="menu-items">
+            <li>Espresso</li>
+            <li>Espresso ristretto</li>
+            <li>Espresso lungo</li>
+            <li>Espresso americano</li>
+            <li>Espresso macchiato</li>
+            <li>Freddo espresso</li>
+            <li>Cappuccino</li>
+            <li>Cappuccino latte</li>
+            <li>Freddo cappuccino</li>
+            <li>Freddo cappuccino latte</li>
+            <li>Flat white</li>
+            <li>Nes</li>
+            <li>Frappe</li>
+            <li>Φίλτρου</li>
+            <li>Φίλτρου V60</li>
+            <li>Ελληνικός</li>
+          </ul>
+
+          <img
+            class="menuSectionImage notVisible"
+            src="../assets/mochaccino.png"
+            alt=""
+          />
+          <h5 class="sub-title">Ροφήματα</h5>
+          <ul class="menu-items">
+            <li>Σοκολάτα</li>
+            <li>Σοκολάτα Bueno</li>
+            <li>Σοκολάτα μπισκότο</li>
+            <li>Σοκολάτα καραμέλα</li>
+            <li>Σοκολάτα πραλίνα</li>
+            <li>Σοκολάτα μπανάνα</li>
+            <li>Mochaccino</li>
+            <li>Σοκολάτα αλατισμένη καραμέλα</li>
+            <li>Τσάι</li>
+            <li>Χαμομήλι</li>
+          </ul>
+
+          <img
+            src="../assets/cocktails.png"
+            alt=""
+            class="menuSectionImage notVisible"
+          />
+          <h5 class="sub-title">Cocktails</h5>
+          <ul class="menu-items">
+            <li>Paloma</li>
+            <li>Negroni</li>
+            <li>Pornstar</li>
+            <li>Mai Tai</li>
+          </ul>
+
+          <img
+            src="../assets/cola.png"
+            alt=""
+            class="menuSectionImage notVisible"
+          />
+          <h5 class="sub-title">Αναψυκτικά</h5>
+          <ul class="menu-items">
+            <li>Βίκος cola 330ml</li>
+            <li>Βίκος cola zero 330ml</li>
+            <li>Βίκος λεμονάδα 330ml</li>
+            <li>Βίκος πορτοκαλάδα 330ml</li>
+            <li>Βίκος soda water 330ml</li>
+            <li>Βίκος pink grapefruit 330ml</li>
+            <li>Κρίνος βυσσινάδα 250ml</li>
+            <li>Κρίνος φραουλάδα 330ml</li>
+            <li>Κρίνος γκαζόζα 250ml</li>
+            <li>Κρίνος πορτοκαλάδα χωρίς ανθρακικό 330ml</li>
+            <li>Bostanica μήλο 250ml</li>
+            <li>Bostanica κεράσι & μήλο 250ml</li>
+            <li>FuzeTea black λεμόνι με εκχύλισμα λουίζας 330ml</li>
+            <li>FuzeTea black ροδάκινο με εκχύλισμα ιβίσκου 330ml</li>
+            <li>Νερό 500ml</li>
+          </ul>
+
+          <img
+            src="../assets/chips.png"
+            alt=""
+            class="menuSectionImage notVisible"
+          />
+          <h5 class="sub-title">Αλμυρά Σνακς</h5>
+          <ul class="menu-items">
+            <li>Jumbo sweet chili 90gr</li>
+            <li>Jumbo sour cream & άνηθο 90gr</li>
+            <li>Jumbo ρίγανη 90gr</li>
+            <li>Jumbo sea salt 90gr</li>
+            <li>Μπαγκέτα λευκή Caesar's</li>
+            <li>Λαγανάκι γαλοπούλα</li>
+          </ul>
+
+          <img
+            src="../assets/cookie.png"
+            alt=""
+            class="menuSectionImage notVisible"
+          />
+          <h5 class="sub-title">Γλυκά Σνάκς</h5>
+          <ul class="menu-items">
+            <li>Afto κρουασάν 150gr</li>
+            <li>Παστέλι με φυστίκι 70gr</li>
+            <li>Παστέλι με σουσάμι & μέλι 70gr</li>
+            <li>Μαντολάτο 70gr</li>
+            <li>Muesli μπάρα με μπανάνα 40gr</li>
+            <li>Muesli με cranberry 40gr</li>
+            <li>Muesli με σοκολάτα 40gr</li>
+            <br />
+            <li>Cookie bites µε γέµιση κακάο 70gr</li>
+            <li>Cookie bites µε κομάτια σοκολάτα 70gr</li>
+            <br />
+            <li>Αλλατίνη kings soft triple chocolate 160gr</li>
+            <li>Αλλατίνη kings soft salted caramel 160gr</li>
+            <li>Αλλατίνη kings soft chocolate chunks 160gr</li>
+            <li>Αλλατίνη kings soft dark chocolate 160gr</li>
+            <br />
+            <li>Βιολάντα cookies Ζero με κακάο 170gr</li>
+            <li>Βιολάντα με γέμιση φουντουκιού 170gr</li>
+            <li>Βιολάντα βρώμης γεμιστά με κρέμα κακάο 220gr</li>
+            <br />
+            <li>Cookie ατοµικό µε σουσάμι & μέλι 70gr</li>
+            <li>Cookie ατοµικό µε σοκολάτα 70gr</li>
+            <li>Γιαούρτι με γκρανόλα, μαρμελάδα βύσινο & μέλι</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="./index.html">Αρχική</a></li>
+        <li><a href="./WebPages/menuPage.html">Μενού</a></li>
+        <li><a href="">Ο Καφές</a></li>
+        <li><a href="">Χώρος</a></li>
+        <li><a href="">Εμείς</a></li>
+        <li><a href="">Επικοινωνία</a></li>
+      </ul>
+      <ul class="inline">
+        <li>
+          <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/nine.bar_skg/"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+        </li>
+      </ul>
+      <p class="small-tag">
+        All rights reserved by <i>Nine Bar</i> • Designed & Developed by
+        <i><a href="https://oryzo.gr" target="_blank">Oryzo</a></i>
+      </p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
